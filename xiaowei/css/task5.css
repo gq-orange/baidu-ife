@@ -1,0 +1,215 @@
+@charset "UTF-8";  /*注意有分号结尾*/
+*{
+    margin: 0;
+    padding: 0;
+}
+html {
+    font: 12px,"黑体";
+}
+body{
+    background-color: #ECECEC;
+}
+p{
+    text-indent: 2em;
+}
+.top {
+    background-color: #333232;
+    height: 60px;
+}
+.top_page_l {
+    line-height: 60px;
+    float: left;
+    color: #fff;
+    padding-left: 40px;
+}
+.top_page_r {
+    line-height: 60px;
+    float: right;
+}
+.top_page_r ul li {
+    float: left;
+    padding-right: 30px;
+}
+.top_page_r ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+.top_page_r ul li a:hover{
+    font-weight:bold;
+    color: #aaa;
+}
+.container{
+    width: 100%;
+    position: relative;
+    padding: 0;
+}
+
+.parts{
+    border: 1px solid #ccc;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 2px 2px #888;
+    margin: 40px;
+}
+
+.parts > h1 {
+    font-size: 28px;
+    line-height: 1.5;
+    font-weight: bold;
+}
+.parts > h2 {
+    font-size: 20px;
+    line-height: 2.5;
+}
+.parts > span {
+    font-size: 18px;
+    line-height: 1;
+}
+.parts > h2,
+.parts > span {
+    color: #777;
+}
+.parts > p {
+    margin-top: 10px;
+    line-height: 1.5;
+    text-indent: 2em;
+}
+.parts > img {
+    margin: 15px 0px;
+}
+.parts > ul {
+    list-style-type: none;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.parts > ul > li {
+    padding-top: 10px;
+}
+
+.imgBox {
+    width: 120px;
+    height: 120px;
+    margin-top: 10px;
+    margin-left: 50px;
+    border: 1px solid #ccc;
+}
+.imgBox > p {
+    font-size: 12px;
+    margin-bottom: 3px;
+    padding: 8px;
+    text-align: center;
+    text-indent: 0em;
+}
+.imgBox > img {
+    width: 100%;
+}
+
+.parts > ol {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-left: 60px;
+}
+.parts > ol > li{
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+.parts > p {
+    text-indent: 0em;
+}
+.parts >table {
+    border-collapse: collapse;
+    width: 100%;
+    border:1px solid #ccc;
+}
+
+.parts > table th {
+    text-align: left;
+    background-color: #4F4E4E;
+    color: #fff;
+}
+
+.parts > table th,
+.parts > table td {
+    padding: 5px;
+}
+/*.parts > table tr:last-of-type {
+    background-color: #ccc;
+    font-weight: bold;
+}*/
+.parts > table tr:last-child {
+    background-color: #ccc;
+    font-weight: bold;
+}
+
+
+.sideBar{
+    border: 1px solid #ccc;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 2px 2px #888;
+    margin: 40px;
+}
+.sideBar > form > span {
+    margin-left: 36%;
+    font-size: 13px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+.sideBar > form > label {
+    display: inline-block;
+    margin-right: 0.5%;
+    width: 35%;
+    text-align: right;
+    vertical-align: top;
+}
+.sideBar > form > textarea {
+    height: 100px;
+    width: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.sideBar > form .btn {
+    border:1px solid #554EF1;
+    border-radius: 5px;
+    background-color: #3B4AF7;
+    cursor: pointer;
+    height: 35px;
+    width: 100%; 
+    color: #FFF;
+    text-align: center;
+    font-size: 14px; 
+    vertical-align: middle;
+}
+.sideBar > form > label, .sideBar > form > input, .sideBar > form > select{
+    margin-top: 15px;
+}
+
+.foot {
+    width: 100%;
+    height: 70px;
+    background: #000;
+    color: #fff;
+}
+
+.foot > p {
+    padding-top: 25px;
+    text-align: center;
+}
+
+/*task5  基于task2修改*/
+.sideBar{
+    float: right;
+    margin: 0 40px;
+    width: 320px;
+}
+.parts{
+    width: auto;
+    margin-right: 460px;
+    overflow: hidden;
+}
+
+.parts .imgBox{
+    float: left;
+    margin: 20px;
+}
