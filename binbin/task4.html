@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IFE JavaScript Task 04</title>
+    <style type="text/css">
+        .contain{
+            margin-top:10px; 
+            height:40px;
+        }
+        .items{
+            float:left; 
+            margin-right:5px;
+            padding:0px 10px;
+            height:40px; 
+            background-color:#F00;
+            font-size:15px;
+            color:#FFF;
+            line-height:40px; 
+            text-align:center; 
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="input" placeholder="请输入一个数字">
+    <button onclick="unshift();">左侧入</button>
+    <button onclick="push();">右侧入</button>
+    <button onclick="shift();">左侧出</button>
+    <button onclick="pop();">右侧出</button>
+    <div id="stack" class="contain"></div>
+
+    <script type="text/javascript">
+
+        function addNum(){
+            var input = document.getElementById("input");
+            var input_value = input.value;
+            var item = document.createElement("div");
+            //正则判断是否为数字
+            if(input_value.search(/^[0-9]+$/) != -1){
+                item.innerHTML = input_value;
+                item.className = "items";
+                item.addEventListener("click", remove);
+                return item;
+            }else{
+                alert("请输入一个数字！");
+            }
+        }
+        function remove(){
+            alert("移除的数值为"+this.innerHTML);
+            this.parentNode.removeChild(this);
+        }
+
+        function unshift(){
+            var item = addNum();
+            stack.insertBefore(item, stack.firstElementChild);
+        }
+        function push(){
+            var item = addNum();
+            stack.appendChild(item);
+        }
+        function shift(){
+            if(stack.firstElementChild){
+                alert("删除的元素的值为："+stack.firstElementChild.innerHTML);
+                stack.removeChild(stack.firstElementChild);
+            }else{
+                alert("没有东西给你删了！");
+            }
+        }
+        function pop(){
+            if(stack.lastElementChild){
+                alert("删除的元素的值为："+stack.lastElementChild.innerHTML);
+                stack.removeChild(stack.lastElementChild);
+            }else{
+                alert("没有东西给你删了！");
+            }
+        }
+    </script>
+</body>
+</html>
